@@ -1,0 +1,27 @@
+<form #userForm = "ngForm" >
+  <div class="form-group">
+    <label>id</label>
+    <input type="number" name="id" required ngModel>
+  </div>
+  <div class="form-group">
+    <label>firstName</label>
+    <br><input type="text" name="firstName" placeholder="Enter ur name" ngModel required>
+  </div>
+
+  <div class="form-group">
+    <label>lastName</label>
+    <br><input type="lastName" name="lastName" placeholder="Enter ur lastName" ngModel required>
+  </div>
+  <button (click)= getInfo(userForm.value)>post</button>
+  <button (click)= updateInfo(userForm.value)>update</button>
+  <button (click)= deletEmployee(userForm.value.id)>delete</button>
+  <button (click)= getEmployee(userForm.value.id)>get</button>
+
+  <h1>{{show.id}}</h1>
+  <h2>{{show.firstName}}</h2>
+  <h2>{{show.lastName}}</h2>
+</form>
+<h2>Parent Component</h2>
+<app-child [logIn]="userLogIn"></app-child>
+
+
