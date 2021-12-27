@@ -20,7 +20,7 @@ export class AppComponent {
  
   constructor(private employeeService :EmployeeService)
   {
-    
+    console.log("app constructor");
   }
 
   getInfo(userForm: any)
